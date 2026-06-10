@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es-EC" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon_pt.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Básico -->
+  <title>Paúl Terán | Ingeniero de Software & Cloud</title>
+  <meta name="description" content="Ingeniero de Software y Cloud con más de 6 años de experiencia en Desarrollo Full Stack, DevSecOps y MLOps. Descubre mi portafolio, proyectos y experiencia técnica." />
+  <meta name="keywords" content="Paúl Terán, Software Engineer, Cloud Engineer, DevSecOps, GCP, Azure, React, Portafolio, Ecuador, Desarrollador, MLOps, Tech" />
+  <meta name="author" content="Paúl Terán" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- GEO Tags -->
+  <meta name="geo.region" content="EC-P" />
+  <meta name="geo.placename" content="Quito" />
+  <meta name="geo.position" content="-0.22985;-78.52495" />
+  <meta name="ICBM" content="-0.22985, -78.52495" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://paul-teran.com/" />
+  <meta property="og:title" content="Paúl Terán | Ingeniero de Software & Cloud" />
+  <meta property="og:description" content="Ingeniero de Software y Cloud con experiencia en Desarrollo Full Stack, DevSecOps y MLOps. Explora mis proyectos y trayectoria." />
+  <meta property="og:image" content="https://paul-teran.com/profile1.png" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://paul-teran.com/" />
+  <meta name="twitter:title" content="Paúl Terán | Ingeniero de Software & Cloud" />
+  <meta name="twitter:description" content="Ingeniero de Software y Cloud con experiencia en Desarrollo Full Stack, DevSecOps y MLOps." />
+  <meta name="twitter:image" content="https://paul-teran.com/profile1.png" />
+  <meta name="twitter:site" content="@parterdev" />
+  <meta name="twitter:creator" content="@parterdev" />
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+  <body
+    class="bg-surface-light dark:bg-surface-dark text-content-baseLight dark:text-content-baseDark font-sans antialiased transition-colors duration-300">
+    <style>
+      /* Ocultar el banner superior y tooltips de Google Translate */
+      .goog-te-banner-frame { display: none !important; }
+      .goog-te-banner-frame.skiptranslate { display: none !important; }
+      #goog-gt-tt { display: none !important; }
+      .goog-te-balloon-frame { display: none !important; }
+      body { top: 0px !important; position: relative !important; }
+      
+      /* Ocultar el select original por custom UI sin usar display none para que se renderice */
+      #google_translate_element { 
+        position: absolute !important;
+        opacity: 0 !important;
+        z-index: -1000 !important;
+        pointer-events: none !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+      }
+    </style>
+    <div id="root"></div>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'es', 
+          includedLanguages: 'en,es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+
+</html>
