@@ -9,9 +9,10 @@ import Recommendations from './components/Recommendations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MouseSpotlight from './components/MouseSpotlight';
+import GeometricBackground from './components/GeometricBackground';
 
 function App() {
-  const [isDark, setIsDark] = useState(true); // Default a dark mode
+  const [isDark, setIsDark] = useState(false); // Default a light mode
 
   useEffect(() => {
     if (isDark) {
@@ -23,11 +24,13 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-brand-accent/30 selection:text-brand-accent relative">
+      <GeometricBackground className="block md:hidden fixed" />
       <MouseSpotlight />
       <Navbar isDark={isDark} toggleDark={() => setIsDark(!isDark)} />
-      <main className="flex-grow pt-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full relative z-10">
+      
+      <div className="w-full relative z-10">
         <Hero />
-      </main>
+      </div>
       
       {/* Sección Skills que rompe el grid para abarcar más ancho */}
       <Skills />

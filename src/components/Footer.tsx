@@ -5,6 +5,7 @@ import { LinkedinIcon } from './icons/LinkedinIcon';
 import { InstagramIcon } from './icons/InstagramIcon';
 import { profileData } from '../data/profile';
 import LanguageSwitcher from './LanguageSwitcher';
+import GeometricBackground from './GeometricBackground';
 
 export default function Footer({ isDark }: { isDark: boolean }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,8 +41,9 @@ export default function Footer({ isDark }: { isDark: boolean }) {
   }, [isAboutOpen]);
 
   return (
-    <footer ref={footerRef} className="border-t border-surface-cardLight dark:border-surface-cardDark bg-surface-light dark:bg-surface-dark mt-20 relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer ref={footerRef} className="border-t border-surface-cardLight dark:border-surface-cardDark bg-surface-light dark:bg-surface-dark mt-20 relative overflow-hidden">
+      <GeometricBackground className="hidden md:block absolute" />
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-12 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
 
         <div className="flex flex-col items-center md:items-start gap-2">
           <a href="#inicio" className="flex items-center gap-2 group mb-2">

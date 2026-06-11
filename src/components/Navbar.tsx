@@ -76,12 +76,10 @@ export default function Navbar({ isDark, toggleDark }: { isDark: boolean, toggle
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center gap-4">
-          <button onClick={toggleDark} className="p-2">
-            {isDark ? <Sun size={20} className="text-brand-accent" /> : <Moon size={20} className="text-brand-navy dark:text-content-titleDark" />}
-          </button>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-brand-navy dark:text-content-titleDark">
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        <div className="md:hidden flex items-center gap-3">
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="flex items-center gap-2 p-1.5 px-3 bg-surface-cardLight dark:bg-surface-cardDark border border-brand-slate/20 rounded-full text-brand-navy dark:text-content-titleDark shadow-sm">
+            <span className="text-sm font-medium">Menú</span>
+            {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>
@@ -102,6 +100,17 @@ export default function Navbar({ isDark, toggleDark }: { isDark: boolean, toggle
               {link.name}
             </a>
           ))}
+          
+          {/* Mobile Theme Toggle con texto guía */}
+          <div className="border-t border-surface-cardLight dark:border-surface-cardDark pt-4 mt-2">
+            <button onClick={toggleDark} className="flex items-center justify-between w-full p-3 rounded-xl bg-surface-cardLight dark:bg-surface-cardDark text-brand-navy dark:text-content-titleDark border border-brand-slate/10 hover:border-brand-accent transition-colors">
+              <span className="font-medium text-sm text-content-baseLight dark:text-content-baseDark">Aspecto visual</span>
+              <div className="flex items-center gap-2 bg-brand-accent/10 dark:bg-brand-accent/20 text-brand-accent px-3 py-1.5 rounded-full transition-colors">
+                <span className="text-sm font-bold">{isDark ? 'Modo Claro' : 'Modo Oscuro'}</span>
+                {isDark ? <Sun size={18} /> : <Moon size={18} />}
+              </div>
+            </button>
+          </div>
         </div>
       )}
     </nav>

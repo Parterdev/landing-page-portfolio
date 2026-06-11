@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { GithubIcon } from './icons/GithubIcon';
 import { LinkedinIcon } from './icons/LinkedinIcon';
 import { profileData } from '../data/profile';
+import GeometricBackground from './GeometricBackground';
 
 export default function Hero() {
   const specialtiesData = [
@@ -21,8 +22,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="inicio" className="min-h-[85vh] flex flex-col justify-center items-start py-20 relative">
-      <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20 w-full">
+    <section id="inicio" className="min-h-[85vh] w-full relative overflow-hidden flex flex-col justify-center">
+      <GeometricBackground className="hidden md:block absolute" />
+      <div className="pt-24 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20 w-full">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -123,6 +126,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
+      </div>
       </div>
     </section>
   );
