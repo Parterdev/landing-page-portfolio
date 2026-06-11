@@ -10,6 +10,7 @@ import GeometricBackground from './GeometricBackground';
 export default function Footer({ isDark }: { isDark: boolean }) {
   const [isVisible, setIsVisible] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isHobbiesExpanded, setIsHobbiesExpanded] = useState(false);
   const footerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -131,7 +132,7 @@ export default function Footer({ isDark }: { isDark: boolean }) {
               Además de mi trabajo en tecnología, participo activamente en comunidades como <strong className="text-brand-accent font-semibold">Tribu Tech Latam</strong> y <strong className="text-brand-accent font-semibold">Google Developer Groups</strong>, espacios donde comparto, aprendo y conecto con personas que también creen en el poder de la innovación.
             </p>
             <p>
-              También mantengo una formación constante a través de plataformas como Platzi, Udemy y Coursera, fortaleciendo mis conocimientos en desarrollo, cloud, inteligencia artificial, datos e idiomas.
+              También mantengo una formación constante a través de plataformas como Platzi, Udemy y Coursera, fortaleciendo mis conocimientos en tecnología y más.
             </p>
             <p className="font-medium text-brand-navy dark:text-content-titleDark pt-2 text-left">
               Y cuando me desconecto de los servidores, me dedico a:
@@ -142,15 +143,33 @@ export default function Footer({ isDark }: { isDark: boolean }) {
                 <span className="text-2xl drop-shadow-sm">🍳</span>
                 <span className="font-medium">Ejecutar "algoritmos culinarios"</span>
               </li>
-              <li className="flex items-center gap-4 bg-surface-cardLight dark:bg-surface-cardDark p-3 rounded-xl border border-brand-slate/5 dark:border-brand-slate/10">
-                <span className="text-2xl drop-shadow-sm">🏃‍♂️</span>
-                <span className="font-medium">Sumar kilómetros corriendo</span>
-              </li>
-              <li className="flex items-center gap-4 bg-surface-cardLight dark:bg-surface-cardDark p-3 rounded-xl border border-brand-slate/5 dark:border-brand-slate/10">
-                <span className="text-2xl drop-shadow-sm">📚</span>
-                <span className="font-medium">Inmerso en un buen libro o descubriendo nuevos lugares y pintando 🎨</span>
-              </li>
+              
+              {isHobbiesExpanded && (
+                <>
+                  <li className="flex items-center gap-4 bg-surface-cardLight dark:bg-surface-cardDark p-3 rounded-xl border border-brand-slate/5 dark:border-brand-slate/10">
+                    <span className="text-2xl drop-shadow-sm">🏃‍♂️</span>
+                    <span className="font-medium">Sumar kilómetros corriendo</span>
+                  </li>
+                  <li className="flex items-center gap-4 bg-surface-cardLight dark:bg-surface-cardDark p-3 rounded-xl border border-brand-slate/5 dark:border-brand-slate/10">
+                    <span className="text-2xl drop-shadow-sm">📚</span>
+                    <span className="font-medium">Inmerso en un buen libro o descubriendo nuevos lugares y pintando 🎨</span>
+                  </li>
+                </>
+              )}
             </ul>
+
+            <button
+              onClick={() => setIsHobbiesExpanded(!isHobbiesExpanded)}
+              className="mt-3 text-xs font-semibold text-brand-accent hover:text-brand-accentHover transition-colors flex items-center gap-1"
+            >
+              {isHobbiesExpanded ? 'Ver menos' : 'Ver más'}
+              <svg
+                className={`w-4 h-4 transition-transform duration-300 ${isHobbiesExpanded ? 'rotate-180' : ''}`}
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
