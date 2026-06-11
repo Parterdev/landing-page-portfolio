@@ -63,12 +63,12 @@ export default function Projects() {
       >
         <div className="w-full">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-navy dark:text-content-titleDark flex items-center gap-4 w-full">
-            <span className="text-brand-accent font-mono text-xl md:text-2xl font-medium">04.</span>
+            <span className="text-brand-accent font-mono text-xl md:text-2xl font-medium">03.</span>
             <span><span className="text-brand-accent">Entradas</span> Destacadas</span>
             <div className="h-px bg-surface-cardLight dark:bg-surface-cardDark flex-grow ml-4 max-w-xs hidden sm:block"></div>
           </h2>
           <p className="text-content-baseLight dark:text-content-baseDark mt-4 text-base md:text-lg max-w-2xl">
-            Descubre mis últimas actividades dentro de comunidades o proyectos personales.
+            Aquí descubrirás mis últimas actividades dentro del ámbito de comunidades, proyectos personales, experiencias profesionales y avances académicos.
           </p>
         </div>
       </motion.div>

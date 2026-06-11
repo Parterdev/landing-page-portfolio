@@ -19,11 +19,12 @@ export default function Skills() {
         transition={{ duration: 0.6 }}
         className="mb-12 md:mb-16 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-brand-navy dark:text-content-titleDark mb-4">
-          Core <span className="text-brand-accent">Skills</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-navy dark:text-content-titleDark mb-4 flex flex-wrap items-center justify-center gap-x-4">
+          <span className="text-brand-accent font-mono text-xl md:text-2xl font-medium">00.</span>
+          <span>Core <span className="text-brand-accent">Skills</span></span>
         </h2>
         <p className="text-content-baseLight dark:text-content-baseDark max-w-2xl mx-auto">
-          Un equilibrio entre sólida base técnica, principios arquitectónicos y habilidades interpersonales para entregar valor real.
+          Mantengo un equilibrio entre una sólida base técnica, pensamiento arquitectónico y habilidades interpersonales para construir soluciones escalables, seguras y orientadas a valor real.
         </p>
       </motion.div>
 

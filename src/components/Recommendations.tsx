@@ -41,6 +41,9 @@ export default function Recommendations() {
           Recomendaciones
           <div className="h-px bg-surface-cardLight dark:bg-surface-cardDark flex-grow ml-4 max-w-xs"></div>
         </h2>
+        <p className="text-content-baseLight dark:text-content-baseDark mt-4 text-base md:text-lg max-w-2xl">
+          Testimonios, referencias y comentarios profesionales que respaldan mi desempeño técnico, compromiso y evolución dentro de equipos multidisciplinarios.
+        </p>
       </motion.div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-12">

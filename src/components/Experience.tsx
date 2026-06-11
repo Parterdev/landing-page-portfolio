@@ -1,10 +1,66 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShoppingCart, QrCode, Utensils } from 'lucide-react';
 import { experienceData } from '../data/experience';
 import { profileData } from '../data/profile';
 
 export default function Experience() {
+  const ExpandableAchievements = ({ achievements, company }: { achievements: string[], company: string }) => {
+    const [isExpanded, setIsExpanded] = React.useState(false);
+    const initialCount = 1;
+    const showButton = achievements.length > initialCount;
+    const visibleAchievements = isExpanded ? achievements : achievements.slice(0, initialCount);
+
+    const getBulletIcon = (index: number) => {
+      let iconColor = "text-brand-accent";
+      if (index === 0) {
+        if (company.includes("KFC")) iconColor = "text-red-500";
+        else if (company.includes("Tipti")) iconColor = "text-orange-500";
+        else if (company.includes("DEUNA")) iconColor = "text-purple-500";
+      } else {
+        // Colores variados para los demás impactos
+        const alternateColors = ["text-sky-500", "text-emerald-500", "text-pink-500", "text-amber-500"];
+        iconColor = alternateColors[(index - 1) % alternateColors.length];
+      }
+
+      if (company.includes("KFC")) return <Utensils size={14} className={`${iconColor} mt-0.5 shrink-0`} />;
+      if (company.includes("Tipti")) return <ShoppingCart size={14} className={`${iconColor} mt-0.5 shrink-0`} />;
+      if (company.includes("DEUNA")) return <QrCode size={14} className={`${iconColor} mt-0.5 shrink-0`} />;
+      return <span className={`${iconColor} font-bold mt-[-2px] shrink-0`}>•</span>;
+    };
+
+    return (
+      <div className="mt-4">
+        <p className="text-sm font-semibold text-brand-navy dark:text-content-titleDark mb-2">Impacto y responsabilidades destacadas:</p>
+        <ul className="space-y-2 text-sm leading-relaxed text-content-baseLight dark:text-content-baseDark">
+          {visibleAchievements.map((ach, achIndex) => {
+            const cleanAch = ach.replace(/^- /, '');
+            return (
+              <li key={achIndex} className="flex gap-2 items-start">
+                {getBulletIcon(achIndex)}
+                <span>{cleanAch}</span>
+              </li>
+            );
+          })}
+        </ul>
+        {showButton && (
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-3 text-xs font-semibold text-brand-accent hover:text-brand-accentHover transition-colors flex items-center gap-1"
+          >
+            {isExpanded ? 'Ver menos' : 'Ver todo'}
+            <svg
+              className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+              fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        )}
+      </div>
+    );
+  };
+
   return (
     <section id="experiencia" className="py-24 relative z-10">
       <motion.div
@@ -20,7 +76,7 @@ export default function Experience() {
           <div className="h-px bg-surface-cardLight dark:bg-surface-cardDark flex-grow ml-4 max-w-xs"></div>
         </h2>
         <p className="text-content-baseLight dark:text-content-baseDark mt-4 text-base md:text-lg max-w-2xl">
-          He aquí un poco de mis últimos tres empleos donde he destacado mi paso como developer hacia cloud engineer.
+          Pasando a mi trayectoria laboral, aquí podrás conocer cómo en mis últimos tres roles he evolucionado desde el desarrollo de software hacia entornos cloud, automatización, DevSecOps y observabilidad de plataformas.
         </p>
       </motion.div>
 
@@ -67,6 +123,7 @@ export default function Experience() {
               <p className="mt-3 text-sm leading-relaxed text-content-baseLight dark:text-content-baseDark">
                 {exp.description}
               </p>
+              {exp.achievements && <ExpandableAchievements achievements={exp.achievements} company={exp.company} />}
               <ul className="mt-4 flex flex-wrap gap-2" aria-label="Tecnologías utilizadas">
                 {exp.technologies.map((tech, techIndex) => (
                   <li key={techIndex}>

@@ -47,7 +47,7 @@ export default function Hero() {
           </h2>
 
           <p className="text-lg md:text-xl max-w-2xl leading-relaxed mt-6 text-content-baseLight dark:text-content-baseDark">
-            Profesional de tecnología con más de 6 años de experiencia diseñando e implementando soluciones innovadoras. Mi trayectoria combina enfoques holísticos en <span className="text-brand-accent font-medium">Desarrollo Full Stack</span>, <span className="text-brand-accent font-medium">DevSecOps</span> y actualmente <span className="text-brand-accent font-medium">Cloud, AI y Datos (MLOps)</span>.
+            Profesional de tecnología con más de 6 años de experiencia creando soluciones digitales para banca, e-commerce, alimentos y servicios. Combino <span className="text-brand-accent font-medium">Desarrollo Full Stack</span>, <span className="text-brand-accent font-medium">DevSecOps</span>, <span className="text-brand-accent font-medium">Cloud</span>, <span className="text-brand-accent font-medium">IA y Datos</span>, con enfoque actual en <span className="text-brand-accent font-medium">MLOps</span> y automatización inteligente.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-8">

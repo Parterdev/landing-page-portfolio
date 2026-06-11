@@ -23,7 +23,7 @@ export default function Education() {
                 <span>Formación <span className="text-brand-accent">Académica</span></span>
               </h2>
               <p className="text-content-baseLight dark:text-content-baseDark mt-4 text-base md:text-lg max-w-2xl">
-                Actualmente curso el último año de mi ingeniería (a distancia) para después integrarme a un programa de cuarto nivel de especialización en datos (esto a la par de Formación autónoma e Idiomas).
+                Actualmente curso el último año de mi Ingeniería Informática en modalidad a distancia. Posteriormente, mi objetivo es integrarme a un programa de cuarto nivel enfocado en Ciencia de Datos e Inteligencia de Negocios, complementando mi formación con aprendizaje autónomo, certificaciones cloud e idiomas.
               </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function Education() {
           >
             <div className="flex items-center gap-4 mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy dark:text-content-titleDark flex items-center gap-4">
-                <span className="text-brand-accent font-mono text-xl md:text-2xl font-medium">03.</span>
+                <span className="text-brand-accent font-mono text-xl md:text-2xl font-medium">04.</span>
                 Idiomas
               </h2>
             </div>
