@@ -37,7 +37,7 @@ export default function Education() {
                           <img
                             src={item.image}
                             alt={item.institution}
-                            className="w-full h-full object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                            className="w-full h-full object-contain grayscale-0 opacity-100 md:grayscale md:opacity-80 md:group-hover:grayscale-0 md:group-hover:opacity-100 transition-all duration-300"
                           />
                         ) : (
                           <GraduationCap className="text-brand-accent/50" />

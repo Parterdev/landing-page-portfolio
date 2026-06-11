@@ -109,7 +109,7 @@ export default function Experience() {
                   <img 
                     src={exp.image} 
                     alt={exp.company} 
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-lg object-cover bg-white border border-brand-slate/20 shadow-md grayscale hover:grayscale-0 transition-all duration-300"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-lg object-cover bg-white border border-brand-slate/20 shadow-md grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
               )}
