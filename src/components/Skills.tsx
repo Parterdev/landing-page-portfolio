@@ -50,7 +50,7 @@ export default function Skills() {
             <div className="space-y-6">
               {techSkills.map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start group">
-                  <div className="mt-1 text-content-baseLight dark:text-content-baseDark/50 group-hover:text-brand-accent transition-colors">
+                  <div className={`mt-1 transition-all duration-300 opacity-100 grayscale-0 md:opacity-50 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-100 md:group-hover:scale-110 ${item.color}`}>
                     <IconWrapper iconName={item.icon} />
                   </div>
                   <div>
@@ -86,7 +86,7 @@ export default function Skills() {
             <div className="space-y-6">
               {softSkills.map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start group">
-                  <div className="mt-1 text-content-baseLight dark:text-content-baseDark/50 group-hover:text-brand-accent transition-colors">
+                  <div className={`mt-1 transition-all duration-300 opacity-100 grayscale-0 md:opacity-50 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-100 md:group-hover:scale-110 ${item.color}`}>
                     <IconWrapper iconName={item.icon} />
                   </div>
                   <div>
