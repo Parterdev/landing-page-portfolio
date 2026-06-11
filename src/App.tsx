@@ -24,7 +24,6 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-brand-accent/30 selection:text-brand-accent relative">
-      <GeometricBackground className="block md:hidden fixed" />
       <MouseSpotlight />
       <Navbar isDark={isDark} toggleDark={() => setIsDark(!isDark)} />
       

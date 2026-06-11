@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="min-h-[85vh] w-full relative overflow-hidden flex flex-col justify-center">
-      <GeometricBackground className="hidden md:block absolute" />
+      <GeometricBackground className="absolute" />
       <div className="pt-24 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20 w-full">
 
@@ -79,7 +79,7 @@ export default function Hero() {
 
           <div className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-surface-cardLight dark:border-surface-cardDark shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 bg-surface-cardLight dark:bg-surface-cardDark">
             <img
-              src="/profile1.png"
+              src="/profile2.png"
               alt="Paúl Terán"
               className="w-full h-full object-cover"
             />

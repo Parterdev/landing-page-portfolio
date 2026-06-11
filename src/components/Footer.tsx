@@ -42,7 +42,7 @@ export default function Footer({ isDark }: { isDark: boolean }) {
 
   return (
     <footer ref={footerRef} className="border-t border-surface-cardLight dark:border-surface-cardDark bg-surface-light dark:bg-surface-dark mt-20 relative overflow-hidden">
-      <GeometricBackground className="hidden md:block absolute" />
+      <GeometricBackground className="absolute" />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-12 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
 
         <div className="flex flex-col items-center md:items-start gap-2">
@@ -63,7 +63,7 @@ export default function Footer({ isDark }: { isDark: boolean }) {
           <div className="flex items-center gap-6">
             <button
               onClick={() => setIsAboutOpen(true)}
-              className="text-content-baseLight dark:text-content-baseDark hover:text-brand-accent dark:hover:text-brand-accent transition-colors"
+              className="text-brand-accent hover:text-brand-accentHover p-2 bg-brand-accent/10 rounded-full transition-all hover:bg-brand-accent/20 hover:scale-110 shadow-sm"
               aria-label="Sobre mí"
             >
               <User size={22} />
@@ -117,17 +117,24 @@ export default function Footer({ isDark }: { isDark: boolean }) {
             <X size={20} />
           </button>
 
-          <h3 className="text-2xl md:text-3xl font-bold text-brand-navy dark:text-content-titleDark mb-6 flex items-center gap-3">
-            ¿Deseas conocerme aún más?
-          </h3>
+          <div className="flex flex-col items-center mb-6">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-surface-cardLight dark:border-surface-cardDark shadow-[0_0_15px_rgba(8,_112,_184,_0.5)] mb-4 bg-brand-accent/10">
+              <img src="/profile1.png" alt="Paúl Terán" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-brand-navy dark:text-content-titleDark text-center">
+              ¿Deseas conocerme aún más?
+            </h3>
+          </div>
 
-          <div className="space-y-5 text-content-baseLight dark:text-content-baseDark text-sm md:text-base leading-relaxed">
+          <div className="space-y-4 text-content-baseLight dark:text-content-baseDark text-sm md:text-base leading-relaxed text-center md:text-left">
             <p>
-              Pues te cuento que soy una persona que colabora activamente en comunidades como <strong className="text-brand-accent font-semibold">Tribu Tech Latam</strong> o <strong className="text-brand-accent font-semibold">Google Developer Groups</strong>. Estudio de manera autónoma con plataformas como Platzi, Udemy o Coursera.
+              Además de mi trabajo en tecnología, participo activamente en comunidades como <strong className="text-brand-accent font-semibold">Tribu Tech Latam</strong> y <strong className="text-brand-accent font-semibold">Google Developer Groups</strong>, espacios donde comparto, aprendo y conecto con personas que también creen en el poder de la innovación.
             </p>
-
-            <p className="font-medium text-brand-navy dark:text-content-titleDark">
-              Cuando me desconecto de los servidores, me dedico a:
+            <p>
+              También mantengo una formación constante a través de plataformas como Platzi, Udemy y Coursera, fortaleciendo mis conocimientos en desarrollo, cloud, inteligencia artificial, datos e idiomas.
+            </p>
+            <p className="font-medium text-brand-navy dark:text-content-titleDark pt-2 text-left">
+              Y cuando me desconecto de los servidores, me dedico a:
             </p>
 
             <ul className="space-y-4 mt-2">
