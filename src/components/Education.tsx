@@ -79,9 +79,13 @@ export default function Education() {
 
             <div className="bg-brand-accent/5 dark:bg-brand-accent/10 border border-brand-accent/20 rounded-3xl p-8 shadow-xl h-auto">
               <div className="flex justify-center mb-8">
-                <div className="p-4 bg-brand-accent/20 rounded-full text-brand-accent">
+                <motion.div 
+                  animate={{ rotate: [0, 8, -8, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+                  className="p-4 bg-brand-accent/20 rounded-full text-brand-accent"
+                >
                   <Languages size={32} />
-                </div>
+                </motion.div>
               </div>
 
               <div className="space-y-6">

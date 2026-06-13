@@ -1,5 +1,13 @@
 export const projectsData = [
   {
+    id: 6,
+    platform: 'GitHub',
+    title: 'MioPic',
+    image: '/proyects/GitHub/github_post_miopic.png',
+    description: 'Una app convierte tus fotos en recuerdos geolocalizados con contexto, recomendaciones e inteligencia artificial... Versión ALFA',
+    link: 'https://github.com/Parterdev/07_my_pick_place_firebase_ai'
+  },
+  {
     id: 1,
     platform: 'Youtube',
     title: 'Pivotear de Dev a DevOps sin fricción con lecciones prácticas',

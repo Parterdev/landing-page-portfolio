@@ -12,13 +12,23 @@ import MouseSpotlight from './components/MouseSpotlight';
 import GeometricBackground from './components/GeometricBackground';
 
 function App() {
-  const [isDark, setIsDark] = useState(false); // Default a light mode
+  const [isDark, setIsDark] = useState(() => {
+    // Revisar primero localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme === 'dark';
+    }
+    // Por defecto modo claro (light)
+    return false;
+  });
 
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
   }, [isDark]);
 

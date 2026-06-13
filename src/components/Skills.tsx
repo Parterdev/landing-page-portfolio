@@ -40,9 +40,13 @@ export default function Skills() {
             className="bg-surface-cardLight dark:bg-surface-cardDark border border-brand-slate/10 dark:border-brand-slate/20 rounded-3xl p-8 sm:p-10 shadow-xl hover:border-brand-accent/30 transition-colors"
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-brand-accent/10 rounded-xl text-brand-accent">
+              <motion.div 
+                animate={{ y: [-3, 3, -3] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="p-3 bg-brand-accent/10 rounded-xl text-brand-accent"
+              >
                 <LucideIcons.Terminal size={28} />
-              </div>
+              </motion.div>
               <h3 className="text-2xl font-bold text-brand-navy dark:text-content-titleDark">
                 Tech Skills
               </h3>
@@ -76,9 +80,13 @@ export default function Skills() {
             className="bg-surface-cardLight dark:bg-surface-cardDark border border-brand-slate/10 dark:border-brand-slate/20 rounded-3xl p-8 sm:p-10 shadow-xl hover:border-brand-accent/30 transition-colors"
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-brand-accent/10 rounded-xl text-brand-accent">
+              <motion.div 
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="p-3 bg-brand-accent/10 rounded-xl text-brand-accent"
+              >
                 <LucideIcons.BrainCircuit size={28} />
-              </div>
+              </motion.div>
               <h3 className="text-2xl font-bold text-brand-navy dark:text-content-titleDark">
                 Soft Skills
               </h3>
