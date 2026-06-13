@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ExternalLink, Hash } from 'lucide-react';
 import { projectsData } from '../data/projects';
 import { GithubIcon } from './icons/GithubIcon';
 import { LinkedinIcon } from './icons/LinkedinIcon';
@@ -116,7 +116,19 @@ export default function Projects() {
                     {project.description}
                   </p>
 
-                  <div className="mt-6 flex items-center gap-2 text-sm font-medium text-brand-accent opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                  {/* Lista de hashtags */}
+                  {project.tags && project.tags.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2 pb-1">
+                      {project.tags.map((tag, idx) => (
+                        <span key={idx} className="flex items-center gap-1 bg-brand-accent/5 dark:bg-brand-accent/10 border border-brand-slate/10 dark:border-brand-slate/20 px-2.5 py-1 rounded-full text-xs font-medium text-brand-navy dark:text-content-titleDark whitespace-nowrap group-hover:border-brand-accent/40 transition-colors">
+                          <Hash size={12} className="text-brand-accent" />
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="mt-4 flex items-center gap-2 text-sm font-medium text-brand-accent opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                     Ver más <ArrowRight size={16} />
                   </div>
                 </div>
