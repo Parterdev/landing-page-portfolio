@@ -39,12 +39,23 @@ export default function Projects() {
   const itemsPerPage = 4;
   const totalPages = Math.ceil(projectsData.length / itemsPerPage);
 
+  const scrollToProjects = () => {
+    const section = document.getElementById('proyectos');
+    if (section) {
+      // Calculamos la posición con un pequeño offset para la barra de navegación
+      const y = section.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   const nextPage = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages);
+    scrollToProjects();
   };
 
   const prevPage = () => {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+    scrollToProjects();
   };
 
   const visibleProjects = projectsData.slice(
@@ -153,7 +164,10 @@ export default function Projects() {
             {Array.from({ length: totalPages }).map((_, idx) => (
               <button
                 key={idx}
-                onClick={() => setCurrentPage(idx)}
+                onClick={() => {
+                  setCurrentPage(idx);
+                  scrollToProjects();
+                }}
                 className={`w-2.5 h-2.5 rounded-full transition-all ${currentPage === idx
                     ? 'bg-brand-accent w-6'
                     : 'bg-brand-slate/30 dark:bg-surface-cardDark hover:bg-brand-slate/50'
