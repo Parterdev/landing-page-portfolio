@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, ChevronLeft, ChevronRight, User } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight, User, UserRound } from 'lucide-react';
 import { recommendationsData } from '../data/recommendations';
 
 export default function Recommendations() {
@@ -103,7 +103,11 @@ export default function Recommendations() {
                       transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                       className="w-16 h-16 rounded-full bg-brand-accent/10 flex items-center justify-center border-2 border-brand-accent/30 text-brand-accent"
                     >
-                      <User size={32} />
+                      {recommendationsData[currentIndex].gender === 'female' ? (
+                        <UserRound size={32} />
+                      ) : (
+                        <User size={32} />
+                      )}
                     </motion.div>
                     <div>
                       <h4 className="font-bold text-brand-navy dark:text-content-titleDark text-lg">
