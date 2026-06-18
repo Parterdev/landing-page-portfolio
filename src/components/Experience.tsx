@@ -142,7 +142,7 @@ export default function Experience() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="mt-16 flex justify-start z-10 relative"
+        className="mt-16 flex flex-wrap gap-4 justify-start z-10 relative"
       >
         <a 
           href={profileData.cvUrl} 
@@ -150,9 +150,21 @@ export default function Experience() {
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-2 px-6 py-3 bg-brand-accent/10 hover:bg-brand-accent text-brand-accent hover:text-white rounded-full font-semibold transition-all duration-300 shadow-sm hover:shadow-brand-accent/25 hover:-translate-y-1"
         >
-          <span>Ver currículum completo</span>
+          <span>Ver currículum completo (ES)</span>
           <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
         </a>
+
+        {profileData.cvEnglishUrl && (
+          <a 
+            href={profileData.cvEnglishUrl} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-6 py-3 border border-brand-accent/30 hover:border-brand-accent text-brand-navy dark:text-content-titleDark hover:text-brand-accent bg-transparent hover:bg-brand-accent/5 rounded-full font-semibold transition-all duration-300 shadow-sm hover:shadow-brand-accent/10 hover:-translate-y-1"
+          >
+            <span>Ver currículum completo (EN)</span>
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+        )}
       </motion.div>
     </section>
   );
