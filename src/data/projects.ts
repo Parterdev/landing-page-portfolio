@@ -1,5 +1,14 @@
 export const projectsData = [
   {
+    id: 7,
+    platform: 'LinkedIn',
+    title: 'El universo de Git - Roadmap DevOps',
+    image: '/proyects/LinkedIn/linkedin_post_gitdevops.png',
+    description: 'En esta nueva entrega viajamos por el universo de Git, esa herramienta que no solo guarda cambios, sino que nos permite controlar líneas temporales, crear ramas, resolver conflictos, volver atrás cuando algo falla y mantener la historia del código bajo control.',
+    link: 'https://www.linkedin.com/posts/devpaulteran_devops-git-github-ugcPost-7475555399237062656-90bU/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACUFybABnbRKTYKq2m1YK0ZBfDEz3NRrcLg',
+    tags: ['Git', 'RoadMapDevOps', 'VersionControl', 'AprendizajeVisual', 'DevOps']
+  },
+  {
     id: 6,
     platform: 'GitHub',
     title: 'MioPic',
