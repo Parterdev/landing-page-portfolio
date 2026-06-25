@@ -98,7 +98,7 @@ export default function Recommendations() {
                   )}
 
                   <div className="flex flex-col items-center justify-center gap-4">
-                    <motion.div 
+                    <motion.div
                       animate={{ scale: [1, 1.05, 1], y: [-2, 2, -2] }}
                       transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                       className="w-16 h-16 rounded-full bg-brand-accent/10 flex items-center justify-center border-2 border-brand-accent/30 text-brand-accent"

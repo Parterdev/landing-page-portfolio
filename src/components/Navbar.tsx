@@ -40,7 +40,7 @@ export default function Navbar({ isDark, toggleDark }: { isDark: boolean, toggle
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-nav py-4 shadow-sm' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isMobileMenuOpen ? 'bg-surface-light dark:bg-surface-dark py-4 shadow-sm' : isScrolled ? 'glass-nav py-4 shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3 group">
           <img
@@ -86,13 +86,15 @@ export default function Navbar({ isDark, toggleDark }: { isDark: boolean, toggle
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-surface-light dark:bg-surface-dark border-b border-surface-cardLight dark:border-surface-cardDark py-4 px-6 flex flex-col gap-4 shadow-xl">
-          {navLinks.map((link) => (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-surface-light dark:bg-surface-dark border-b border-surface-cardLight dark:border-surface-cardDark py-4 px-6 flex flex-col gap-4 shadow-xl z-50">
+          {navLinks.map((link, index) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-lg font-medium py-2 border-b border-surface-cardLight dark:border-surface-cardDark last:border-0 transition-colors ${activeSection === link.id
+              className={`text-lg font-medium py-2 transition-colors ${
+                  index !== navLinks.length - 1 ? 'border-b border-surface-cardLight dark:border-surface-cardDark' : ''
+                } ${activeSection === link.id
                   ? 'text-brand-accent pl-2 border-l-2 border-l-brand-accent'
                   : 'hover:text-brand-accent'
                 }`}
