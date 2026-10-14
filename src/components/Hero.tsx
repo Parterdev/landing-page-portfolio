@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Monitor, Smartphone, GitMerge } from 'lucide-react';
+import { ArrowRight, Monitor, Smartphone, GitMerge, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GithubIcon } from './icons/GithubIcon';
 import { LinkedinIcon } from './icons/LinkedinIcon';
@@ -8,6 +8,7 @@ import GeometricBackground from './GeometricBackground';
 
 export default function Hero() {
   const specialtiesData = [
+    { title: "AI Engineer", colorClass: "text-indigo-500", bgClass: "bg-indigo-500/10", Icon: Bot },
     { title: "Software Engineer", colorClass: "text-orange-500", bgClass: "bg-orange-500/10", Icon: Monitor },
     { title: "Mobile Developer", colorClass: "text-yellow-500", bgClass: "bg-yellow-500/10", Icon: Smartphone },
     { title: "DevOps Engineer", colorClass: "text-green-500", bgClass: "bg-green-500/10", Icon: GitMerge }

@@ -3,14 +3,14 @@ export const educationData = [
     id: 1,
     institution: "Università Telematica Unimarconi",
     degree: "Maestría en Data Science y Business Analytics",
-    status: "Muy pronto",
+    status: "No iniciado",
     image: "/companies/gugliermomarconi.png"
   },
   {
     id: 2,
     institution: "Universidad Tecnológica Israel",
     degree: "Ingeniería en Informática",
-    status: "En curso",
+    status: "Por culminar",
     image: "/companies/uisrael.jpg"
   },
   {

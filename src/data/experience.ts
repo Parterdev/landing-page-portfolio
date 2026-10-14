@@ -1,5 +1,18 @@
 export const experienceData = [
   {
+    company: "KASHIO (contractor)",
+    role: "AI Software Engineer",
+    period: "Sep 2026 – Actualidad",
+    description: "Desarrollo de soluciones backend para sistemas transaccionales en la célula de integraciones financieras. Aplicación de agentes, cloud e IA para fortalecer el desarrollo, despliegue y operación de servicios propios y de terceros.",
+    achievements: [
+      "- Desarrollo de soluciones backend para sistemas transaccionales en la célula de integraciones financieras.",
+      "- Implementación de agentes de IA y arquitecturas cloud para potenciar el despliegue y la operación continua de servicios.",
+      "- Integración de APIs financieras y servicios de terceros asegurando altos estándares de resiliencia y disponibilidad."
+    ],
+    technologies: ["AI Agents", "Cloud", "Backend", "Fintech", "Microservicios"],
+    image: "/companies/kashio.jpeg"
+  },
+  {
     company: "Grupo KFC Ecuador",
     role: "DevSecOps Engineer",
     period: "Jun 2025 – Jun 2026",

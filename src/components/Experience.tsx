@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShoppingCart, QrCode, Utensils } from 'lucide-react';
+import { ArrowRight, ShoppingCart, QrCode, Utensils, Bot } from 'lucide-react';
 import { experienceData } from '../data/experience';
 import { profileData } from '../data/profile';
 
@@ -14,7 +14,8 @@ export default function Experience() {
     const getBulletIcon = (index: number) => {
       let iconColor = "text-brand-accent";
       if (index === 0) {
-        if (company.includes("KFC")) iconColor = "text-red-500";
+        if (company.toUpperCase().includes("KASHIO")) iconColor = "text-emerald-500";
+        else if (company.includes("KFC")) iconColor = "text-red-500";
         else if (company.includes("Tipti")) iconColor = "text-orange-500";
         else if (company.includes("DEUNA")) iconColor = "text-purple-500";
       } else {
@@ -23,6 +24,7 @@ export default function Experience() {
         iconColor = alternateColors[(index - 1) % alternateColors.length];
       }
 
+      if (company.toUpperCase().includes("KASHIO")) return <Bot size={14} className={`${iconColor} mt-0.5 shrink-0`} />;
       if (company.includes("KFC")) return <Utensils size={14} className={`${iconColor} mt-0.5 shrink-0`} />;
       if (company.includes("Tipti")) return <ShoppingCart size={14} className={`${iconColor} mt-0.5 shrink-0`} />;
       if (company.includes("DEUNA")) return <QrCode size={14} className={`${iconColor} mt-0.5 shrink-0`} />;
@@ -76,7 +78,7 @@ export default function Experience() {
           <div className="h-px bg-surface-cardLight dark:bg-surface-cardDark flex-grow ml-4 max-w-xs"></div>
         </h2>
         <p className="text-content-baseLight dark:text-content-baseDark mt-4 text-base md:text-lg max-w-2xl">
-          Pasando a mi trayectoria laboral, aquí podrás conocer cómo en mis últimos tres roles he evolucionado desde el desarrollo de software hacia entornos cloud, automatización, DevSecOps y observabilidad de plataformas.
+          Pasando a mi trayectoria laboral, aquí podrás conocer cómo a lo largo de mis roles he evolucionado desde el desarrollo de software hacia entornos cloud, automatización, DevSecOps, observabilidad de plataformas e Inteligencia Artificial.
         </p>
       </motion.div>
 

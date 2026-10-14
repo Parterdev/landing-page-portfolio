@@ -1,5 +1,14 @@
 export const projectsData = [
   {
+    id: 8,
+    platform: 'GitHub',
+    title: 'Patitas Caminando',
+    image: '/proyects/GitHub/patitascaminando.jpeg',
+    description: 'Proyecto que nació desde lo académico como parte de un proceso de Vinculación con la Sociedad, pero que terminó sintiéndose como algo mucho más grande.',
+    link: 'https://github.com/PatitasCaminando',
+    tags: ['PatitasCaminando', 'TecnologíaConPropósito', 'PWA', 'BienestarAnimal', 'AdopciónResponsable']
+  },
+  {
     id: 7,
     platform: 'LinkedIn',
     title: 'El universo de Git - Roadmap DevOps',
